@@ -38,4 +38,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation("io.ktor:ktor-client-core:1.4.0")
+    implementation "io.ktor:ktor-client-android:1.4.0"
+    implementation "io.ktor:ktor-utils-jvm:1.4.0"
+    implementation "io.ktor:ktor-client-logging-jvm:1.4.0"
 }
