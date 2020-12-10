@@ -38,7 +38,7 @@
         android:id="@+id/submit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit"
+        android:text="Show departures"
         android:onClick="submitStations"/>
 
     <TextView
@@ -46,5 +46,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/journeys_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="LinearLayoutManager" />
 
 </LinearLayout>

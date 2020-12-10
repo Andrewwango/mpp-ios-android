@@ -9,7 +9,7 @@ import androidx.fragment.app.DialogFragment
 import java.util.*
 
 class TimePickerFragment : DialogFragment(), TimePickerDialog.OnTimeSetListener {
-    var selectedTime : String = ""
+    var selectedTime : List<Int> = listOf<Int>()
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val c = Calendar.getInstance()
         val hour = c.get(Calendar.HOUR_OF_DAY)
@@ -20,6 +20,6 @@ class TimePickerFragment : DialogFragment(), TimePickerDialog.OnTimeSetListener 
 
     override fun onTimeSet(view: TimePicker, hourOfDay: Int, minute: Int) {
         val min = if (minute < 10) "0$minute" else "$minute"
-        selectedTime = "T$hourOfDay:$min:00.000%2B00%3A00"
+        selectedTime = listOf<Int>(hourOfDay, minute)
     }
 }
